@@ -18,5 +18,9 @@
             FontSize="20"
             HorizontalOptions="CenterAndExpand"
             x:Name="ThirdName"/>
+        <Label 
+            FontSize="20"
+            HorizontalOptions="CenterAndExpand"
+            x:Name="label"/>
     </VerticalStackLayout>
 </ContentPage>

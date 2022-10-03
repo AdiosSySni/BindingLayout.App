@@ -24,10 +24,9 @@ public partial class MainPage : ContentPage
 
 	//	var stream = await result.OpenReadAsync();
 	//	myImage.Source = ImageSource.FromStream(() => stream);
-
 	//}
 
-    public void ClickButton(object sender, EventArgs e)
+    public async void ClickButton(object sender, EventArgs e)
 	{
         //Person person = new Person()
         //{
@@ -36,13 +35,19 @@ public partial class MainPage : ContentPage
         //    ThirdName = ThirdNameEntry.Text 
         //};
 
-        Preferences.Default.Set("Name", NameEntry.Text);
+
         Preferences.Default.Set("Surname", SurnameEntry.Text);
+        Preferences.Default.Set("Name", NameEntry.Text);
         Preferences.Default.Set("ThirdName", ThirdNameEntry.Text);
         Preferences.Default.Set("URL", ImageURL.Text);
 
-        Navigation.PushAsync(new NewPage1());
+        //Navigation.PushAsync(new NewPage1());
+        await Shell.Current.GoToAsync($"nwpg1?input={SurnameEntry.Text}.&input2={NameEntry.Text[0]}.&input3={ThirdNameEntry.Text[0]}");
+    }
 
+    public void SecondPage(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new NewPage2());
     }
 }
 

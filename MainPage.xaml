@@ -9,14 +9,14 @@
             <Entry x:Name="NameEntry" Placeholder="Введите имя"/>
             <Entry x:Name="SurnameEntry" Placeholder="Введите фамилию"/>
             <Entry x:Name="ThirdNameEntry" Placeholder="Введите отчество"/>
-            
+
 
             <!--<Image
                 x:Name="myImage"
                 HeightRequest="200"
                 HorizontalOptions="Center"
-                />-->
-            <!--<Button
+                />
+            <Button
                 x:Name="PickImage"
                 Text="Выберите изображение"
                 WidthRequest="200"
@@ -29,9 +29,17 @@
 
             <Button
                 x:Name="NextPage"
-                Text="Перейдите на другую страницу"
+                Text="Перейдите на 1 страницу"
                 WidthRequest="200"
                 Clicked="ClickButton"
+                />
+            
+            <Button
+                x:Name="GoToSecondPage"
+                Margin="10"
+                Text="Перейдите на 2 страницу"
+                WidthRequest="200"
+                Clicked="SecondPage"
                 />
             
         </VerticalStackLayout>

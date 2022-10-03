@@ -2,12 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BindingLayout.MainPage">
+    
 
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Padding="10">
+            <Entry x:Name="NameEntry" Placeholder="Введите имя"/>
+            <Entry x:Name="SurnameEntry" Placeholder="Введите фамилию"/>
+            <Entry x:Name="ThirdNameEntry" Placeholder="Введите отчество"/>
+            
 
+            <!--<Image
+                x:Name="myImage"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                />-->
+            <!--<Button
+                x:Name="PickImage"
+                Text="Выберите изображение"
+                WidthRequest="200"
+                Clicked="FilePickerButton"
+                />-->
 
+            <Entry
+                x:Name="ImageURL"
+                Placeholder="Введите ссылку на изображение"/>
+
+            <Button
+                x:Name="NextPage"
+                Text="Перейдите на другую страницу"
+                WidthRequest="200"
+                Clicked="ClickButton"
+                />
+            
         </VerticalStackLayout>
+        
     </ScrollView>
-
+    
 </ContentPage>
